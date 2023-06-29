@@ -6,12 +6,16 @@
     // Verifique qual é o meio de transporte mais barato e apresente em tela, especificando quanto custará para ir e voltar do trabalho diariamente.
 
     //Entrada
-
+    const litro = Number(prompt(`Informe o preço do litro do combustível:`).trim().replace(".",","));
+    const trabalho = Number(prompt(`Informe a quantidade de combustível utilizado para se deslocar até o trabalho:`).trim().replace(".",","));
+    const transporte = Number(prompt(`Informe o preço do transporte público para se deslocar até o trabalho:`).trim().replace(".",","));
+    let conta = (litro * 2) * (2 * trabalho);
 
     //Processamento
-
+    let final = (conta > transporte) ? final = `O transporte público é mais barato!`
+    : final = `O transporte público é mais caro`;
     
     //Saída
-
+    alert(final);
     
 </script>
