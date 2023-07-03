@@ -10,10 +10,18 @@
     // Verifique se o usuário ganha mais do que recebe e apresente em tela, indicando quanto que sobrou após o pagamento das contas ou quanto que faltou para poder pagar todas as contas previstas.
 
     //Entrada
-
+    const salario = Number(prompt(`informe quanto você recebe de salário:`).trim().replace(",","."));
+    const agua = Number(prompt(`informe quanto de despesa você têm com água:`).trim().replace(",","."));
+    const energia = Number(prompt(`informe quanto de despesa você têm com energia elétrica:`).trim().replace(",","."));
+    const telefone = Number(prompt(`informe quanto de despesa você têm com telefone:`).trim().replace(",","."));
+    const superm = Number(prompt(`informe quanto de despesa você têm com supermercado:`).trim().replace(",","."));
 
     //Processamento
+    const total = agua + energia + telefone + superm;
+    const pobre = total - salario;
+    const rico = salario - total
 
+    salario > total ? alert(`Após o pagamento, sobrou R$ ${rico.toFixed(2).replace(".",",")}.`) : alert(`Saldo insuficiente, faltam R$ ${pobre.toFixed(2).replace(".",",")} `);
     
     //Saída
     
